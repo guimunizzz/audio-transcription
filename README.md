@@ -31,34 +31,33 @@ Um aplicativo web construído com **Streamlit** que transcreve áudios em portug
    cd seu-repositorio
 Crie e ative um ambiente virtual:
 bash
-
-Copiar
+```
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 .\venv\Scripts\activate   # Windows
+```
 Instale as dependências:
-bash
-
-Copiar
+```
 pip install -r requirements.txt
+```
 Configure a chave API do Gemini:
 Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
-plaintext
-
-Copiar
+```
 GEMINI_API_KEY=sua_chave_api_aqui
+```
 Substitua sua_chave_api_aqui pela sua chave obtida na plataforma Gemini.
+
 Instale o FFmpeg:
 Windows: Baixe em ffmpeg.org e adicione ao PATH.
 Mac: brew install ffmpeg
 Linux: sudo apt install ffmpeg
 Verifique a instalação: ffmpeg -version
 Executando o Aplicativo
-Inicie o aplicativo Streamlit:
-bash
 
-Copiar
+Inicie o aplicativo Streamlit:
+```
 streamlit run main.py
+```
 Acesse a interface no navegador em http://localhost:8501.
 Uso
 Faça upload de um arquivo de áudio (MP3 ou WAV, até 1 minuto).
@@ -69,7 +68,7 @@ Clique em Mostrar Informações e Instruções para mais detalhes ou para reinic
 📂 Estrutura do Projeto
 text
 
-Copiar
+```
 seu-repositorio/
 ├── main.py              # Código principal do aplicativo Streamlit
 ├── requirements.txt     # Dependências do projeto
@@ -77,17 +76,16 @@ seu-repositorio/
 ├── temp_audio/         # Diretório temporário para arquivos de áudio (criado automaticamente)
 ├── venv/               # Ambiente virtual (não versionado)
 ├── README.md           # Este arquivo
+```
 🛠️ Dependências
 As dependências estão listadas no requirements.txt:
-
-plaintext
-
-Copiar
+```
 streamlit==1.38.0
 speechrecognition==3.10.4
 pydub==0.25.1
 google-generativeai==0.8.2
 python-dotenv==1.0.1
+```
 🔧 Tecnologias Utilizadas
 Streamlit: Framework para construção da interface web.
 Google Speech Recognition: Para transcrição de áudio.
@@ -107,8 +105,3 @@ Certifique-se de que a chave API do Gemini está configurada corretamente.
 Arquivos temporários são criados em temp_audio/ e removidos automaticamente após o processamento.
 📜 Licença
 Este projeto está licenciado sob a MIT License.
-
-📬 Contato
-Para dúvidas ou sugestões, abra uma issue ou entre em contato com seu-email@example.com.
-
-Desenvolvido com 💻 por [Seu Nome ou Usuário]
