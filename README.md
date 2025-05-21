@@ -29,44 +29,46 @@ Um aplicativo web construído com **Streamlit** que transcreve áudios em portug
    ```bash
    git clone https://github.com/seu-usuario/seu-repositorio.git
    cd seu-repositorio
-Crie e ative um ambiente virtual:
-bash
+## Crie e ative um ambiente virtual:
 ```
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 .\venv\Scripts\activate   # Windows
 ```
-Instale as dependências:
+## Instale as dependências:
 ```
 pip install -r requirements.txt
 ```
-Configure a chave API do Gemini:
-Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
+##Configure a chave API do Gemini:
+**Crie um arquivo .env na raiz do projeto com o seguinte conteúdo**:
 ```
 GEMINI_API_KEY=sua_chave_api_aqui
 ```
-Substitua sua_chave_api_aqui pela sua chave obtida na plataforma Gemini.
+**Substitua sua_chave_api_aqui pela sua chave obtida na plataforma Gemini**.
 
-Instale o FFmpeg:
-Windows: Baixe em ffmpeg.org e adicione ao PATH.
-Mac: brew install ffmpeg
-Linux: sudo apt install ffmpeg
-Verifique a instalação: ffmpeg -version
-Executando o Aplicativo
+### Instale o FFmpeg:
+1. Windows: Baixe em ffmpeg.org e adicione ao PATH.
+2. Mac: brew install ffmpeg
+3. Linux: sudo apt install ffmpeg
 
-Inicie o aplicativo Streamlit:
+**Verifique a instalação: ffmpeg -version**
+
+## Executando o Aplicativo
+
+### Inicie o aplicativo Streamlit:
 ```
 streamlit run main.py
 ```
 Acesse a interface no navegador em http://localhost:8501.
-Uso
-Faça upload de um arquivo de áudio (MP3 ou WAV, até 1 minuto).
-Selecione o idioma de destino (ex.: Inglês, Espanhol, Japonês).
-Clique em Processar Áudio para transcrever e traduzir.
-Visualize os resultados nos expanders e baixe a transcrição e/ou tradução.
-Clique em Mostrar Informações e Instruções para mais detalhes ou para reiniciar o aplicativo.
-📂 Estrutura do Projeto
-text
+
+**Uso**
+1. Faça upload de um arquivo de áudio (MP3 ou WAV, até 1 minuto).
+2. Selecione o idioma de destino (ex.: Inglês, Espanhol, Japonês).
+3. Clique em Processar Áudio para transcrever e traduzir.
+4. Visualize os resultados nos expanders e baixe a transcrição e/ou tradução.
+5. Clique em Mostrar Informações e Instruções para mais detalhes ou para reiniciar o aplicativo.
+
+### 📂 Estrutura do Projeto
 
 ```
 seu-repositorio/
@@ -77,8 +79,8 @@ seu-repositorio/
 ├── venv/               # Ambiente virtual (não versionado)
 ├── README.md           # Este arquivo
 ```
-🛠️ Dependências
-As dependências estão listadas no requirements.txt:
+### 🛠️ Dependências
+**As dependências estão listadas no requirements.txt:**
 ```
 streamlit==1.38.0
 speechrecognition==3.10.4
@@ -86,22 +88,23 @@ pydub==0.25.1
 google-generativeai==0.8.2
 python-dotenv==1.0.1
 ```
-🔧 Tecnologias Utilizadas
-Streamlit: Framework para construção da interface web.
-Google Speech Recognition: Para transcrição de áudio.
-Gemini AI: Para tradução de texto.
-FFmpeg: Para processamento de arquivos de áudio.
-Pydub: Para manipulação de áudio em Python.
-Python-dotenv: Para gerenciamento de variáveis de ambiente.
-🤝 Como Contribuir
-Faça um fork do repositório.
-Crie um branch para sua feature: git checkout -b minha-feature.
-Commit suas alterações: git commit -m "Adiciona minha feature".
-Faça push para o branch: git push origin minha-feature.
-Abra um Pull Request no GitHub.
-⚠️ Notas
+### 🔧 Tecnologias Utilizadas
+1. Streamlit: Framework para construção da interface web.
+2. Google Speech Recognition: Para transcrição de áudio.
+3. Gemini AI: Para tradução de texto.
+4. FFmpeg: Para processamento de arquivos de áudio.
+5. Pydub: Para manipulação de áudio em Python.
+6. Python-dotenv: Para gerenciamento de variáveis de ambiente.
+
+### 🤝 Como Contribuir
+1. Faça um fork do repositório.
+2. Crie um branch para sua feature: git checkout -b minha-feature.
+3. Commit suas alterações: git commit -m "Adiciona minha feature".
+4. Faça push para o branch: git push origin minha-feature.
+5. Abra um Pull Request no GitHub.
+### ⚠️ Notas
 O áudio deve ter no máximo 1 minuto para melhor desempenho na transcrição.
 Certifique-se de que a chave API do Gemini está configurada corretamente.
 Arquivos temporários são criados em temp_audio/ e removidos automaticamente após o processamento.
-📜 Licença
+### 📜 Licença
 Este projeto está licenciado sob a MIT License.
